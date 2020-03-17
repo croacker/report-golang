@@ -12,16 +12,25 @@ type employee struct {
 
 func try(v int) (string, error) {
 	if v > 10 {
-		return "baaaaad", errors.New("too much")
+		return "", errors.New("too much")
 	} else {
 		return "good", nil
 	}
 }
 
+func catch(e error) {
+	fmt.Println(e)
+}
+
+func finaly() {
+	fmt.Println("Recover")
+}
+
 func main() {
+	defer finaly()
 	msg, err := try(11)
 	if err != nil {
-		fmt.Println(err)
+		catch(err)
 	} else {
 		fmt.Println(msg)
 	}
