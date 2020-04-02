@@ -125,3 +125,18 @@ go, principles of greatest surprise
 
 
 https://events.webinar.ru/19426377/3436025
+
+
+finally
+
+возврат нескольких
+recover
+
+mixin
+
+reflection изменение части строки
+
+go машинное обучение
+
+добавить слайд про опыт
+

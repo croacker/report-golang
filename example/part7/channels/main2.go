@@ -18,7 +18,7 @@ func producer(c chan string) {
 }
 
 func main() {
-	c := make(chan string)
+	c := make(chan string, 10)
 	go producer(c)
 
 	var input string

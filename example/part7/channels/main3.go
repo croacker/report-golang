@@ -7,20 +7,21 @@ import (
 
 //Без каналов
 
-var msg = "start"
+var msg1 = "start"
+var msg2 = "start"
 
 func producer() {
 	i := 0
 	for true {
 		i++
-		msg = "from producer " + string(i)
+		msg1 = "from producer " + string(i)
 		time.Sleep(time.Second * 2)
 	}
 }
 
 func consumer() {
 	for {
-		fmt.Println(msg)
+		fmt.Println(msg2)
 		time.Sleep(time.Second * 1)
 	}
 }

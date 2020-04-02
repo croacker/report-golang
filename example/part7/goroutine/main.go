@@ -16,6 +16,7 @@ func asyncFunc() {
 
 func main() {
 	go asyncFunc()
+	fmt.Println("program started.....")
 	var input string
 	fmt.Scanln(&input)
 }

@@ -17,14 +17,6 @@ func producer(c chan string) {
 	}
 }
 
-func consumer(c chan string) {
-	for {
-		msg := <-c
-		fmt.Println(msg)
-		time.Sleep(time.Second * 10)
-	}
-}
-
 func rangeConsumer(c chan string) {
 	for msg := range c {
 		fmt.Println(msg)
@@ -34,7 +26,7 @@ func rangeConsumer(c chan string) {
 func main() {
 	c := make(chan string, 5)
 	go producer(c)
-	go consumer(c)
+	go rangeConsumer(c)
 
 	var input string
 	fmt.Scanln(&input)
