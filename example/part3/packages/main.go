@@ -1,7 +1,9 @@
 package main
 
-import( "./employes"
- "fmt")
+import (
+	"fmt"
+	//"./employes"
+)
 
 func main() {
 	fmt.Println(employes.employee{"rrrrrr"})

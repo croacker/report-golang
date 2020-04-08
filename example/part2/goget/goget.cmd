@@ -1,1 +1,1 @@
-go get github.com/lib/pq
+go get github.com/golobby/config

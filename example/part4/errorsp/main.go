@@ -27,8 +27,10 @@ func finaly() {
 }
 
 func main() {
+	e := employee{name: "name", salary: 100}
+
 	defer finaly()
-	msg, err := try(11)
+	msg, err := try(e.salary)
 	if err != nil {
 		catch(err)
 	} else {
